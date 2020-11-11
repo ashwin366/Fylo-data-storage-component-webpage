@@ -1,0 +1,182 @@
+body {
+  background-color: hsl(229, 57%, 11%);
+  margin: 0;
+  color: #fff;
+  font-family: "Raleway";
+  font-size: 14px;
+  height: 100vh;
+}
+
+h1 {
+  color: black;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.container {
+  background-image: url(bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 100%;
+  padding: 22% 20%;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Title and Logo Section */
+.title {
+  height: 120px;
+  width: 18.625rem;
+  background-color: hsl(228, 56%, 26%);
+  padding: 40px 0 40px 40px;
+  display: inline-block;
+  border-radius: 10px 90px 10px 10px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.icons {
+  background-color: hsl(229, 57%, 11%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  height: 45px;
+  width: 45px;
+  border-radius: 8px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* Data Storage Indication Section */
+.storage {
+  border-radius: 10px;
+  margin-left: 30px;
+  background-color: hsl(228, 56%, 26%);
+  padding: 25px 2.5rem;
+  position: relative;
+  width: 30rem;
+}
+
+.storage p {
+  font-weight: 400;
+}
+
+.gb {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.data-consumed {
+  font-weight: 700;
+}
+
+.data-range {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Grdient Data Consumption Indicator */
+.bar {
+  background-color: hsl(229, 57%, 19%);
+  border-radius: 30px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.color-bar {
+  display: flex;
+  width: 74.5%;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px;
+  margin: 3px;
+  height: 13px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.point {
+  display: flex;
+  margin: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: hsl(243, 100%, 93%);
+}
+
+/* 185 gb Message Cloud */
+.speech p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.speech {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 175px;
+  height: 68px;
+  line-height: 68px;
+  text-align: center;
+  border-radius: 10px 10px 0 10px;
+  color: hsl(229, 7%, 55%);
+  top: -42px;
+  right: 40px;
+}
+
+.speech::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: white white transparent transparent;
+  top: 68px;
+  right: 0;
+}
+
+@media (max-width:1200px) {
+  .container {
+    height: 100vh;
+    background-image: url(bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+  }
+
+  .title {
+    display: block;
+    width: auto;
+    padding: 40px 40px 40px;
+  }
+
+  .storage {
+    margin: 20px 0;
+    width: auto;
+    padding-bottom: 40px;
+  }
+
+  .speech {
+    border-radius: 10px;
+    top: 130px;
+    left: 23%;
+  }
+
+  .speech::after {
+    display: none;
+  }
+}
+
+@media (max-width:500px) {
+  .container {
+    background-position: 0 0;
+    padding: 25% 7%;
+  }
+}
